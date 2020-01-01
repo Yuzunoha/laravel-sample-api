@@ -16,7 +16,8 @@ class ArticlesController extends Controller
     {
         // $articles変数にArticleモデルから全てのレコードを取得して、代入
         $articles = Article::all();
-        return $articles;        
+        // return $articles;
+        return view('articles.index');
     }
 
     /**
