@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Article;
 class ArticlesController extends Controller
 {
     /**
@@ -13,7 +14,9 @@ class ArticlesController extends Controller
      */
     public function index()
     {
-        //
+        // $articles変数にArticleモデルから全てのレコードを取得して、代入
+        $articles = Article::all();
+        return $articles;        
     }
 
     /**
